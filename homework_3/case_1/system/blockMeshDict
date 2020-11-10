@@ -1,0 +1,116 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  8.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+//
+       
+//refine times
+ 
+    
+          //domain length 2, lower cavity  width/height
+            //domain length 3, upper cavity  width/height
+        //z-axis (small number)
+
+        
+        
+  
+convertToMeters 1;
+
+vertices
+(
+    //vertex on the front
+    (0   0 0)  // pt 0 (a0f) 
+    (6   0 0)  // pt 1 (a1f) 
+    (6   -4 0)  // pt 2 (a2f) 
+    (10   -4 0)  // pt 3 (a3f) 
+    (10   0 0)  // pt 4 (a4f) 
+    (10   10 0)  // pt 5 (a5f) 
+    (6   10 0)  // pt 6 (a6f) 
+    (0   10 0)  // pt 7 (a7f) 
+
+    //vertex on back
+    (0   0 0.1)  // pt 8 (a0b) 
+    (6   0 0.1)  // pt 9 (a1b) 
+    (6   -4 0.1)  // pt 10 (a2b) 
+    (10   -4 0.1)  // pt 11 (a3b) 
+    (10   0 0.1)  // pt 12 (a4b) 
+    (10   10 0.1)  // pt 13 (a5b) 
+    (6   10 0.1)  // pt 14 (a6b) 
+    (0   10 0.1)  // pt 15 (a7b) 
+);
+
+blocks
+(
+    // block 1
+    hex (0 1 6 7 8 9 14 15)
+    block1 (6 10 1) simpleGrading (1 1 1)
+
+    // block 2
+    hex (1 4 5 6 9 12 13 14)
+    block2 (4 10 1) simpleGrading (1 1 1)
+
+    //block 3
+    hex (2 3 4 1 10 11 12 9)
+    block3 (4 4 1) simpleGrading (1 1 1)
+);
+
+edges
+(
+);
+
+boundary
+(
+    movingWall
+    {
+        type wall;
+        faces
+        (
+            (7 15 14 6)
+            (6 14 13 5)
+        );
+    }
+    fixedWalls
+    {
+        type wall;
+        faces
+        (
+            (0 8 15 7)
+            (4 12 13 5)
+            (3 11 12 4)
+            (0 8 9 1)
+            (2 10 9 1)
+            (2 10 11 3)
+        );
+    }
+    frontAndBack
+    {
+        type empty;
+        faces
+        (
+            (0 1 6 7)
+            (1 4 5 6)
+            (2 3 4 1)
+            (8 9 14 15)
+            (9 12 13 14)
+            (10 11 12 9)
+        );
+    }
+);
+
+
+mergePatchPairs
+(
+);
+
+// ************************************************************************* //

@@ -1,0 +1,17 @@
+set terminal png 
+set term png enhanced font '/usr/share/fonts/liberation/LiberationSerif-Regular.ttf' 
+
+set title "Velocity components" font ",20"
+set xlabel "Diagonal distance (m)" font ",20"
+set ylabel "Velocity components (m/s)" font ",20"
+set xrange [0:1.5]
+set yrange [-0.4:0.5]
+set xtics 0.02
+set grid xtics ytics
+set output "plotU_gnuplot.png"
+
+set key ins vert
+set key top left
+
+plot "postProcessing/sample/0.5/data_U.xy" using 1:2 with lines title "U_X",\
+     "postProcessing/sample/0.5/data_U.xy" using 1:3 with lines title "U_Y"

@@ -1,0 +1,8 @@
+This is the example cavity case with some additional things:
+1. added "sample" in the "system" directory for postprocessing
+2. added plotting scripts with python and gnuplot
+
+You need to adjust/modify to suit your needs.
+
+Xiaofeng Liu
+Penn State University

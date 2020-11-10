@@ -1,0 +1,6 @@
+# Gnuplot script file for plotting data from file "probes.dat"
+set title "Case 1 Probe"
+set xlabel "Iterations"
+set ylabel "T value"
+plot  "postProcessing/probes/0/p" using 1:2 title 'Probe Point'
+pause mouse
