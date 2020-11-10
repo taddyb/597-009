@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os, sys
 import math
+import numpy as np
 from numpy import loadtxt
 import matplotlib.pyplot as plt
 
@@ -10,7 +11,7 @@ plt.rc('font', family='serif')
 plt.figure(1);
 plt.ylabel(" T (degree)", fontsize=16); 
 plt.xlabel(" Distance along Diagonal ", fontsize=16); 
-plt.title(" $T$ at probe point ", fontsize=16)
+plt.title(" $T$ along diagonal ", fontsize=16)
 #plt.xlim([0,0.16])
 #plt.ylim([-0.4,0.4])
 
@@ -22,30 +23,17 @@ plt.grid()
 #plot T
 fileName = "{}/postProcessing/probes/0/T"
 files_list = [
-"10x10",
-"50x50",
-"100x100"
+["10x10","red"],
+["50x50","blue"],
+["100x100","black"]
 ]
 T=[]
-distance=[
-0.075,
-0.22499999999999998,
-0.37499999999999994,
-0.5249999999999999,
-0.6749999999999998,
-0.8249999999999997,
-0.9749999999999998,
-1.1249999999999998,
-1.2749999999999997,
-1.4249999999999996
-]
+distance = np.arange(0,1.411, 0.141).tolist()
 for f in files_list:
-    abc =loadtxt(fileName.format(f), skiprows=0)
-    for z in abc:
-	T.append(z[1])
-    plt.plot(distance,T,'k',label=f)
+    txt = loadtxt(fileName.format(f[0]), skiprows=0)
+    plt.plot(distance,txt[1][1:],'k',label=f[0], c=f[1])
 
-plt.legend(loc='upper left')
+plt.legend(loc='upper right')
 plt.savefig("plotT_problem1.png")
 #plt.show()
 

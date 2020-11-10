@@ -28,21 +28,25 @@ boundaryField
 
     right
     {
-        type            fixedValue;
-        value           uniform 0;
+//        type            fixedValue;
+//        value           uniform 0;
+          type            zeroGradient;
     }
 
     up
     {
-        type            fixedValue;
-        value           uniform 100;
+//        type            fixedValue;
+//        value           uniform 100;
+        type           zeroGradient;
     }
 
     down
     {
         type            fixedValue;
         value           uniform 0;
-    }
+//          type            zeroGradient;
+
+   }
 
     frontAndBack
     {
