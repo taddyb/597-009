@@ -23,9 +23,9 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         10;
+endTime         2;
 
-deltaT          .1;
+deltaT          .01;
 
 writeControl    timeStep;
 
@@ -44,6 +44,11 @@ timeFormat      general;
 timePrecision   6;
 
 runTimeModifiable true;
+
+DebugSwitches
+{
+    lduMatrix 2;
+}
 
 functions
 {
