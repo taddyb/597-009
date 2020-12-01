@@ -1,0 +1,101 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  5.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     advectionDiffusionFoam;
+
+startFrom       startTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         100;
+
+deltaT          1;
+
+writeControl    timeStep;
+
+writeInterval   1;
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  6;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;
+
+functions
+{
+    probes
+    {
+        type            probes;
+        libs            ("libsampling.so");
+        writeControl    timeStep; //writeTime;
+        probeLocations
+        (
+            (-1 0 -1.0001)
+            (-0.75 0 -1.0001)
+            (-0.5 0 -1.0001)
+            (0.5 0 -1.0001)
+            (0.75 0 -1.0001)
+            (1 0 -1.0001)
+            (1.25 0 -1.0001)
+            (1.5 0 -1.0001)
+            (1.75 0 -1.0001)
+            (2 0 -1.0001)
+            (2.25 0 -1.0001)
+            (2.5 0 -1.0001)
+            (2.75 0 -1.0001)
+            (3 0 -1.0001)
+            (3.25 0 -1.0001)
+            (3.5 0 -1.0001)
+            (3.75 0 -1.0001)
+            (4 0 -1.0001)
+        );
+        fixedLocations  false;
+        fields
+        (
+            U
+        );
+    }
+    forces
+    {
+        type forceCoeffs;
+        libs ("libforces.so");
+        writeControl timeStep;
+        writeInterval 1;
+        patches ("cylinder");
+        rho rhoInf; // Indicates incompressible
+        log true;
+        rhoInf 1; // Redundant for incompressible
+        liftDir (0 1 0);
+        dragDir (1 0 0);
+        CofR (0 0 0); // Axle midpoint on ground
+        pitchAxis (0 0 1);
+        magUInf 1;
+        lRef 1; // length scale for moment
+        Aref 1; // area
+    }
+}
+
+// ************************************************************************* //

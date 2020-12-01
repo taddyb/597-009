@@ -1,0 +1,123 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      snappyHexMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+castellatedMesh true;
+snap            true;
+addLayers       true;
+
+geometry
+{
+    cylinder.stl
+    {
+        type triSurfaceMesh;
+        name cylinder;
+    }
+};
+
+castellatedMeshControls
+{
+    features
+    (
+//      { file "CAD.eMesh"; level 1; }
+    );
+    
+    maxLocalCells        1000000;
+    maxGlobalCells       4000000;
+    minRefinementCells         0;
+    maxLoadUnbalance          0.10;
+    resolveFeatureAngle 80;
+    allowFreeStandingZoneFaces true;
+
+    refinementSurfaces
+    {
+        cyliner
+        {
+            level (2 3);
+        }
+    }
+
+    refinementRegions
+    {
+    }
+
+    locationInMesh (1e-5 1e-5 1e-5); // Offset from (0 0 0) to avoid
+                                     // coinciding with face or edge
+    nCellsBetweenLevels 3;
+}
+
+snapControls
+{
+    nSolveIter          30;
+    nRelaxIter           5;
+    nSmoothPatch         3;
+    tolerance           4.0;
+    nRelaxIter          5;
+}
+
+addLayersControls
+{
+    layers
+    {
+        "cylinder.*"
+        {
+            nSurfaceLayers 2;
+        }
+    }
+
+    relativeSizes       true; // false, usually with firstLayerThickness
+    expansionRatio      1.0;
+    finalLayerThickness 0.5;
+    minThickness        1e-3;
+    featureAngle         30;
+    nGrow                 0;
+    maxFaceThicknessRatio 0.5;
+    maxThicknessToMedialRatio 0.3;
+    nBufferCellsNoExtrude  0;
+    nLayerIter            50;
+//  firstLayerThickness 0.01;
+
+//  maxThicknessToMedialRatio 0.6;
+}
+
+meshQualityControls
+{
+    maxNonOrtho        65;
+    minVol          1e-13;
+    minArea            -1;
+    minConcave         80;
+    minTetQuality   1e-30;
+    maxConcave         80;
+    maxInternalSkewness 4;
+    maxBoundarySkewness 20;
+    minFaceWeight       0.05;
+    minVolRatio         0.01;
+    minTwist            0.05;
+    minTriangleTwist    -1;
+    minDeterminant     0.001;
+    errorReduction     0.75;
+    nSmoothScale         4;
+}
+
+writeFlags
+(
+    scalarLevels
+    layerSets
+    layerFields
+);
+
+mergeTolerance 1e-6;
+
+// ************************************************************************* //
