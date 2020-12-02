@@ -1,0 +1,530 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-340defec456f
+Exec   : /home/tbindas/OpenFOAM/tbindas-8/platforms/linux64GccDPInt32Opt/bin/totalKE
+Date   : Dec 01 2020
+Time   : 17:43:57
+Host   : "pop-os"
+PID    : 159288
+I/O    : uncollated
+Case   : /home/tbindas/OpenFOAM/tbindas-8/homework_7/problem_2/cavity
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Time = 0
+    Reading U
+    Calculating total kinetic energy
+KE = 0
+
+Time = 0.005
+    Reading U
+    Calculating total kinetic energy
+KE = 9.48055e-07
+
+Time = 0.01
+    Reading U
+    Calculating total kinetic energy
+KE = 1.81743e-06
+
+Time = 0.015
+    Reading U
+    Calculating total kinetic energy
+KE = 2.22058e-06
+
+Time = 0.02
+    Reading U
+    Calculating total kinetic energy
+KE = 2.4802e-06
+
+Time = 0.025
+    Reading U
+    Calculating total kinetic energy
+KE = 2.65505e-06
+
+Time = 0.03
+    Reading U
+    Calculating total kinetic energy
+KE = 2.78008e-06
+
+Time = 0.035
+    Reading U
+    Calculating total kinetic energy
+KE = 2.87153e-06
+
+Time = 0.04
+    Reading U
+    Calculating total kinetic energy
+KE = 2.93943e-06
+
+Time = 0.045
+    Reading U
+    Calculating total kinetic energy
+KE = 2.99074e-06
+
+Time = 0.05
+    Reading U
+    Calculating total kinetic energy
+KE = 3.02948e-06
+
+Time = 0.055
+    Reading U
+    Calculating total kinetic energy
+KE = 3.05909e-06
+
+Time = 0.06
+    Reading U
+    Calculating total kinetic energy
+KE = 3.0818e-06
+
+Time = 0.065
+    Reading U
+    Calculating total kinetic energy
+KE = 3.09931e-06
+
+Time = 0.07
+    Reading U
+    Calculating total kinetic energy
+KE = 3.11285e-06
+
+Time = 0.075
+    Reading U
+    Calculating total kinetic energy
+KE = 3.12337e-06
+
+Time = 0.08
+    Reading U
+    Calculating total kinetic energy
+KE = 3.13155e-06
+
+Time = 0.085
+    Reading U
+    Calculating total kinetic energy
+KE = 3.13794e-06
+
+Time = 0.09
+    Reading U
+    Calculating total kinetic energy
+KE = 3.14292e-06
+
+Time = 0.095
+    Reading U
+    Calculating total kinetic energy
+KE = 3.14683e-06
+
+Time = 0.1
+    Reading U
+    Calculating total kinetic energy
+KE = 3.1499e-06
+
+Time = 0.105
+    Reading U
+    Calculating total kinetic energy
+KE = 3.1523e-06
+
+Time = 0.11
+    Reading U
+    Calculating total kinetic energy
+KE = 3.15419e-06
+
+Time = 0.115
+    Reading U
+    Calculating total kinetic energy
+KE = 3.15567e-06
+
+Time = 0.12
+    Reading U
+    Calculating total kinetic energy
+KE = 3.15684e-06
+
+Time = 0.125
+    Reading U
+    Calculating total kinetic energy
+KE = 3.15777e-06
+
+Time = 0.13
+    Reading U
+    Calculating total kinetic energy
+KE = 3.1585e-06
+
+Time = 0.135
+    Reading U
+    Calculating total kinetic energy
+KE = 3.15908e-06
+
+Time = 0.14
+    Reading U
+    Calculating total kinetic energy
+KE = 3.15953e-06
+
+Time = 0.145
+    Reading U
+    Calculating total kinetic energy
+KE = 3.15989e-06
+
+Time = 0.15
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16017e-06
+
+Time = 0.155
+    Reading U
+    Calculating total kinetic energy
+KE = 3.1604e-06
+
+Time = 0.16
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16058e-06
+
+Time = 0.165
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16072e-06
+
+Time = 0.17
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16083e-06
+
+Time = 0.175
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16092e-06
+
+Time = 0.18
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16099e-06
+
+Time = 0.185
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16104e-06
+
+Time = 0.19
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16108e-06
+
+Time = 0.195
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16111e-06
+
+Time = 0.2
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16114e-06
+
+Time = 0.205
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16117e-06
+
+Time = 0.21
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16119e-06
+
+Time = 0.215
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16121e-06
+
+Time = 0.22
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16122e-06
+
+Time = 0.225
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16123e-06
+
+Time = 0.23
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16124e-06
+
+Time = 0.235
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16126e-06
+
+Time = 0.24
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16127e-06
+
+Time = 0.245
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16127e-06
+
+Time = 0.25
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16128e-06
+
+Time = 0.255
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16129e-06
+
+Time = 0.26
+    Reading U
+    Calculating total kinetic energy
+KE = 3.1613e-06
+
+Time = 0.265
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16131e-06
+
+Time = 0.27
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16132e-06
+
+Time = 0.275
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16132e-06
+
+Time = 0.28
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16133e-06
+
+Time = 0.285
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16134e-06
+
+Time = 0.29
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16134e-06
+
+Time = 0.295
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16135e-06
+
+Time = 0.3
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16135e-06
+
+Time = 0.305
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16136e-06
+
+Time = 0.31
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16136e-06
+
+Time = 0.315
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16137e-06
+
+Time = 0.32
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16137e-06
+
+Time = 0.325
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16138e-06
+
+Time = 0.33
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16138e-06
+
+Time = 0.335
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16138e-06
+
+Time = 0.34
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16139e-06
+
+Time = 0.345
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16139e-06
+
+Time = 0.35
+    Reading U
+    Calculating total kinetic energy
+KE = 3.1614e-06
+
+Time = 0.355
+    Reading U
+    Calculating total kinetic energy
+KE = 3.1614e-06
+
+Time = 0.36
+    Reading U
+    Calculating total kinetic energy
+KE = 3.1614e-06
+
+Time = 0.365
+    Reading U
+    Calculating total kinetic energy
+KE = 3.1614e-06
+
+Time = 0.37
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16141e-06
+
+Time = 0.375
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16141e-06
+
+Time = 0.38
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16141e-06
+
+Time = 0.385
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16141e-06
+
+Time = 0.39
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16142e-06
+
+Time = 0.395
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16142e-06
+
+Time = 0.4
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16142e-06
+
+Time = 0.405
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16142e-06
+
+Time = 0.41
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16142e-06
+
+Time = 0.415
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16142e-06
+
+Time = 0.42
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16142e-06
+
+Time = 0.425
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16143e-06
+
+Time = 0.43
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16143e-06
+
+Time = 0.435
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16143e-06
+
+Time = 0.44
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16143e-06
+
+Time = 0.445
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16143e-06
+
+Time = 0.45
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16143e-06
+
+Time = 0.455
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16143e-06
+
+Time = 0.46
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16143e-06
+
+Time = 0.465
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16144e-06
+
+Time = 0.47
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16144e-06
+
+Time = 0.475
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16144e-06
+
+Time = 0.48
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16144e-06
+
+Time = 0.485
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16144e-06
+
+Time = 0.49
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16144e-06
+
+Time = 0.495
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16144e-06
+
+Time = 0.5
+    Reading U
+    Calculating total kinetic energy
+KE = 3.16144e-06
+
