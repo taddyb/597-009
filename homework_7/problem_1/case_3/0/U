@@ -33,17 +33,17 @@ boundaryField
 
     down
     {
-        type            zeroGradient;
+        type            slip;
     }
 
     up
     {
-        type           zeroGradient;
+        type           slip;
     }
 
     frontAndBack
     {
-        type           empty;
+        type           slip;
     }
     
     cylinder

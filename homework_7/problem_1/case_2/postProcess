@@ -1,0 +1,35 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-340defec456f
+Exec   : postProcess -field U
+Date   : Dec 02 2020
+Time   : 17:29:16
+Host   : "pop-os"
+PID    : 244488
+I/O    : uncollated
+Case   : /home/tbindas/OpenFOAM/tbindas-8/homework_7/problem_1/case_1
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+forces forces:
+    Not including porosity effects
+forceCoeffs forces:
+    Not including porosity effects
+Time = 0
+
+Reading fields:
+    volVectorFields: U
+
+Executing functionObjects

@@ -78,7 +78,7 @@ castellatedMeshControls
     );
 
     resolveFeatureAngle 60;
-    allowFreeStandingZoneFaces false;
+    allowFreeStandingZoneFaces true;
 
     refinementSurfaces
     {
@@ -92,8 +92,8 @@ castellatedMeshControls
     {
     }
 
-    locationInMesh (0 2 0); // Offset from (0 0 0) to avoid
-                                     // coinciding with face or edge
+    locationInMesh (0.001 1.001 0.01); // Offset from (0 0 0) to avoid
+                           // coinciding with face or edge
 }
 
 snapControls
@@ -142,54 +142,7 @@ addLayersControls
 
 meshQualityControls
 {
-//- Maximum non-orthogonality allowed. Set to 180 to disable.
-    maxNonOrtho 65;
-
-    //- Max skewness allowed. Set to <0 to disable.
-    maxBoundarySkewness 20;
-    maxInternalSkewness 4;
-
-    //- Max concaveness allowed. Is angle (in degrees) below which concavity
-    //  is allowed. 0 is straight face, <0 would be convex face.
-    //  Set to 180 to disable.
-    maxConcave 80;
-
-    //- Minimum projected area v.s. actual area. Set to -1 to disable.
-    minFlatness 0.5;
-
-    //- Minimum pyramid volume. Is absolute volume of cell pyramid.
-    //  Set to a sensible fraction of the smallest cell volume expected.
-    //  Set to very negative number (e.g. -1E30) to disable.
-    minVol 1e-13;
-    minTetQuality 1e-30;
-
-    //- Minimum face area. Set to <0 to disable.
-    minArea -1;
-
-    //- Minimum face twist. Set to <-1 to disable. dot product of face normal
-    //  and face centre triangles normal
-    minTwist 0.02;
-
-    //- Minimum normalised cell determinant
-    //  1 = hex, <= 0 = folded or flattened illegal cell
-    minDeterminant 0.001;
-
-    //- minFaceWeight (0 -> 0.5)
-    minFaceWeight 0.02;
-
-    //- minVolRatio (0 -> 1)
-    minVolRatio 0.01;
-
-    // must be >0 for Fluent compatibility
-    minTriangleTwist -1;
-
-
-    // Advanced
-
-    //- Number of error distribution iterations
-    nSmoothScale 4;
-    //- Amount to scale back displacement at error points
-    errorReduction 0.75;
+    #include "meshQualityDict"
 }
 
 mergeTolerance 1e-6;

@@ -43,7 +43,7 @@ boundaryField
 
     frontAndBack
     {
-        type            empty;
+        type            zeroGradient;
     }
     
     cylinder
